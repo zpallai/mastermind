@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Mastermind game"/>
+    <link rel="shortcut icon" href="#">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700&family=PT+Mono&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+    <title>Mastermind</title>
+  </head>
+  <body>
+    <p id="row-counter">10</p>
+    <div id="app-container">
+      <header id="header">
+        MASTERMIND
+      </header>
+      <div id="board-container">
+        <div id="board">
+          <div id="game-row-1" class="game-row">
+            <div id="player-row-1">
+              <div class="board-place"></div>
+              <div class="board-place"></div>
+              <div class="board-place"></div>
+              <div class="board-place"></div>
+            </div>
+            <div id="results-1" class="results">
+              <div class="results-place"></div>
+              <div class="results-place"></div>
+              <div class="results-place"></div>
+              <div class="results-place"></div>
+            </div>
+            <div id="none-correct-1" class="none-correct">X</div>
+          </div>
+        </div>
+        <p id="you-won">You won!</p>
+        <p id="game-over">Game Over :(</p>
+        <div id="buttons-container">
+          <button id="clear-row-button" onclick="clearRow()" type="button">CLEAR ROW</button>
+          <button id="test-row-button" onclick="rowTest()" type="button">TEST ROW</button>
+          <button id="start-over-button" onClick="window.location.reload()" type="button">START OVER</button>
+        </div>
+        <div id="color-options"></div>
+      </div>
+    <div>
+    <script src="./scripts.js"></script>
+  </body>
+</html>

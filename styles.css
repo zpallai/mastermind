@@ -1,0 +1,141 @@
+/* App Styles */
+
+body {
+  font-family: "Exo 2", sans-serif;
+  background-color: rgb(236, 232, 232);
+}
+
+#app-container {
+  background-color: rgba(191, 74, 74, 0.599);
+  margin: 2rem 4rem;
+  border-radius: 30px;
+  text-align: center;
+  overflow: scroll;
+}
+
+#header {
+  font-size: 50px;
+  letter-spacing: 0.17em;
+  padding-top: 2rem;
+}
+
+#board-container {
+  display: grid;
+  justify-items: center;
+  margin: 0rem auto;
+}
+
+#board {
+  margin-top: 2rem;
+  overflow: scroll;
+}
+
+#row-counter,
+#you-won,
+#game-over {
+  display: none;
+}
+
+#you-won,
+#game-over {
+  font-size: 1.5rem;
+}
+
+.none-correct {
+  visibility: hidden;
+  color: red;
+  margin: 0.4rem 0rem 0rem 1rem;
+}
+
+#buttons-container {
+  display: flex;
+}
+
+#clear-row-button,
+#test-row-button,
+#start-over-button,
+#play-again-button {
+  font-size: 0.9rem;
+  width: 110px;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+  margin: 1rem 1rem 0rem 0rem;
+}
+
+#play-again-button {
+  display: none;
+}
+
+.game-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+}
+
+#color-options {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  padding: 2rem 2rem 2rem 0rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 15px;
+  margin: 0rem auto;
+}
+
+.board-place,
+#color-options div {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0rem 1rem;
+}
+
+.board-place {
+  white-space: nowrap;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: 30px 30px;
+}
+
+.results-place {
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0rem 0.3rem;
+}
+
+@media screen and (max-width: 580px) {
+  #app-container,
+  #color-options,
+  #buttons-container {
+    transform: scale(0.8, 0.8);
+    margin: 0;
+  }
+
+  #game-row {
+    margin-top: 40px;
+  }
+
+  #buttons-container div {
+    margin: -2rem;
+    padding: -2rem;
+    position: absolute;
+  }
+
+  #header {
+    font-size: 1.5rem;
+  }
+
+  .board-place {
+    margin: 0rem 0.5rem;
+  }
+}
